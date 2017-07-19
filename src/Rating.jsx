@@ -91,7 +91,7 @@ var Rating = createReactClass({
   componentDidMount: function () {
     this.setState({
       // detect the computed direction style for the mounted component
-      direction: window.getComputedStyle(this.refs.container, null).getPropertyValue("direction")
+      direction: window.getComputedStyle(this.refs.container.getDOMNode(), null).getPropertyValue("direction")
     });
   },
   componentWillReceiveProps: function (nextProps) {
